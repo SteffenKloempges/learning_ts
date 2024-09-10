@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="bg-slate-200 min-h-screen">
+        <header class="sm:container mx-auto text-center px-8">
+            <h1 class="text-5xl py-8">movies for you</h1>
+            <form class="grid grid-cols-3 gap-3">
+                <input type="text" name="" id="inputSearch" class="col-start-1 col-end-3 rounded-md px-2">
+                <input type="button" value="Search" class="rounded-md py-2 bg-red-400 text-white text-lg"
+                    id="search__btn">
+                <input type="button" value="Year Up"
+                    class="border-solid border-2 border-red-400 rounded-md py-2 text-red-400 text-lg" id="asc__btn">
+                <input type="button" value="Year Down"
+                    class="border-solid border-2 border-red-400 rounded-md py-2 text-red-400 text-lg" id="desc__btn">
+                <input type="button" value="Best Rate"
+                    class="border-solid border-2 border-red-400 rounded-md py-2 text-red-400 text-lg" id="rate__btn">
+            </form>
+        </header>
+        <main id="movies__wrapper" class="sm:container mx-auto mt-6 grid grid-cols-3 gap-6">
+
+        </main>
+    </div>
+    <script type="module" src="./movies.ts"></script>
+</body>
+
+</html>

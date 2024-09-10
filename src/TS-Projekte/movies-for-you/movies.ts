@@ -1,10 +1,9 @@
 import movieData from "./movieData";
 const moviesWrapper = document.getElementById("movies__wrapper") as HTMLElement;
-const searchBtn = document.querySelector('#search__btn');
-const ascBtn = document.querySelector('#asc__btn');
-const descBtn = document.querySelector('#desc__btn');
-const rateBtn = document.querySelector('#rate__btn');
-console.log(movieData);
+const searchBtn = document.querySelector('#search__btn') as HTMLInputElement;
+const ascBtn = document.querySelector('#asc__btn') as HTMLInputElement;
+const descBtn = document.querySelector('#desc__btn') as HTMLInputElement;
+const rateBtn = document.querySelector('#rate__btn') as HTMLInputElement;
 
 type Movie = [string, string, string, string, string[], string];
 
@@ -67,9 +66,10 @@ const searchMovie = (): void => {
             return movies;
         }
     })
-
+    //=======================================================
     //hier noch fall bauen wenn kein film gefunden wurde
-    console.log(filteredMovie);
+    //=======================================================
+
 
     renderMovies(filteredMovie);
 }

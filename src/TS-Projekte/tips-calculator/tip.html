@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <script type="module" src="./tip.ts"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center items-center h-screen">
+    <section class="max-w-md mx-auto bg-red-100 p-6 rounded-md">
+        <h1 class="text-lg text-center mb-4">Calculate your Tip</h1>
+        <form class="flex flex-col">
+            <div class="flex flex-col my-3">
+                <label for="invoiceAmount" class="text-lg">How much is the bill?</label>
+                <input type="number" name="invoiceAmount" id="invoiceAmount" class="rounded-md">
+            </div>
+            <div class="flex flex-col">
+                <label for="numberOfPerson" class="text-lg">How many people share the bill?</label>
+                <input type="number" name="numberOfPerson" id="numberOfPerson" class="rounded-md">
+            </div>
+            <select name="" id="selectService" class="block my-3">
+                <option value="nothingSelected">what was the service like ?</option>
+                <option value="1.05">bad service</option>
+                <option value="1.10">good service</option>
+                <option value="1.20">a dream ❤️</option>
+            </select>
+            <input type="button" value="Calculate" class="bg-red-300 rounded-md text-white text-lg py-2" id="calcBtn">
+        </form>
+        <article id="output" class="mt-4">
+
+        </article>
+    </section>
+</body>
+
+</html>

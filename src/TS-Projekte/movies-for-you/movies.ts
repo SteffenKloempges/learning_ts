@@ -8,11 +8,11 @@ const rateBtn = document.querySelector('#rate__btn') as HTMLInputElement;
 type Movie = [string, string, string, string, string[], string];
 
 //warum hier nochmal extra die array literale angeben ?
-const renderMovies = (data: Movie[]) => {
+const renderMovies = (data: Movie[]): void => {
     //check for data
     if (data) {
         //first loop of complete movie data
-        data.forEach((movie: Movie) => {
+        data.forEach((movie: Movie): void => {
             //create all needed elements
             const movieCard = document.createElement("div");
             const movieTitle = document.createElement("h2");
@@ -74,7 +74,7 @@ const searchMovie = (): void => {
     renderMovies(filteredMovie);
 }
 
-const sortMovies = (sortParam: string) => {
+const sortMovies = (sortParam: string): void => {
     const copyMovieData = [...movieData];
     moviesWrapper.innerHTML = "";
     switch (sortParam) {
